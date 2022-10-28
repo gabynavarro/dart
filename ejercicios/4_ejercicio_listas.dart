@@ -4,14 +4,14 @@ void main() {
   // Elements:    N   N   N   N   N
   // Index:       0   1   2   3   4
 
-  List<int> numbersList = List(5);
+  List<int> numbersList = [5];
   numbersList[0] = 73; // Operación de insert
   numbersList[1] = 64;
   numbersList[3] = 21;
   numbersList[4] = 12;
 
   numbersList[0] = 99; // Update operation
-  numbersList[1] = null; // Delete operation
+  //numbersList[1] = null; // Delete operation
 
   print(numbersList[0]);
   print("\n");
@@ -45,14 +45,14 @@ void main() {
   countries.add("Nepal");
   countries.add("Japan");
 
-  List<int> numbersList1 = List(); // Método 2
+  List<int> numbersList1 = []; // Método 2
   numbersList1.add(73); // Insert Operation
   numbersList1.add(64);
   numbersList1.add(21);
   numbersList1.add(12);
 
   numbersList1[0] = 99; // Update operation
-  numbersList1[1] = null; // Delete operation
+  //numbersList1[1] = null; // Delete operation
 
   print(numbersList[0]);
 
