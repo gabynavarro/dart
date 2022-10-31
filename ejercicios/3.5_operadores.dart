@@ -42,6 +42,7 @@ void main() {
   !(z1 == z2 && z1 > z3) ? print("Verdadero") : print("Falso");
 
 //Operadores de test de tipos
+  print("Operadores de test: ");
   p1 is Punto ? print("p1 es Punto") : print("p1 no es Punto");
   p1 is Recta ? print("p1 es Punto") : print("p1 no es Punto");
 // Si tenemos:

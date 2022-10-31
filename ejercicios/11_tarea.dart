@@ -1,27 +1,21 @@
 void main() {
-  var producto0 = Producto(1, 90.00, "Tuerca");
-  var producto1 = Producto(2, 100.00, "Tornillo");
-  var producto2 = Producto(3, 200.00, "Arandela");
-  var producto3 = Producto(4, 99.00, "Martillo");
-
-  var lista = List();
-  lista.add(producto0);
-  lista.add(producto1);
-  lista.add(producto2);
-  lista.add(producto3);
-
-  lista.forEach((producto) {
-    if (producto.precio >= 100 && producto.precio < 1000.00) {
-      print(producto.toString());
-    }
-  });
+  var p1 = Product(1, 1.50, "alfajor");
+  var p2 = Product(2, 90.00, "Tuerca");
+  var p3 = Product(3, 25.00, "brocha");
+  List l = [];
+  l.add(p1);
+  l.add(p2);
+  l.add(p3);
+  l.forEach((element) => {
+        if (element.precio > 45) {print(element)}
+      });
 }
 
-class Producto {
+class Product {
   final int id;
   final double precio;
   final String nombre;
-  Producto(this.id, this.precio, this.nombre);
+  Product(this.id, this.precio, this.nombre);
 
   @override
   String toString() {

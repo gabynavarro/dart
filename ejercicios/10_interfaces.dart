@@ -1,6 +1,6 @@
 class Animal {
-  int id;
-  String especie;
+  late int id;
+  late String especie;
 
   nacer() => print("Naciendo ...");
   comer(var comida) => print("Comiendo $comida");
@@ -8,12 +8,12 @@ class Animal {
 
 class Gato implements Animal {
   @override
-  int id;
+  late int id;
   @override
-  String especie;
+  late String especie;
 
-  String nombre;
-  bool botas;
+  late String nombre;
+  late bool botas;
 
   @override
   comer(comida) => print("Comiendo $comida para gato");

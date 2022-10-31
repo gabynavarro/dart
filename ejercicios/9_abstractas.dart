@@ -1,6 +1,6 @@
 abstract class Animal {
-  int id;
-  String especie;
+  late int id;
+  late String especie;
 
   nacer() => print("Naciendo ...");
   comer(var comida) => print("Comiendo $comida");
@@ -8,8 +8,8 @@ abstract class Animal {
 }
 
 class Gato extends Animal {
-  String nombre;
-  bool botas;
+  late String nombre; //late variables que se inicializaran en forma peresoza
+  late bool botas;
 
   @override
   hablar() => print("Mew");

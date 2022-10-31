@@ -10,14 +10,9 @@ class Persona {
 
 // Constructor - Mismo nombre que la clase
   Persona(this.nombre, this._edad);
-  //Constructores nombrados.Nombre del constructor, punto y un nombre a asignar.
-  Persona.nombre() {
-    this.nombre = "";
-    this._edad = 1;
-  }
 
   set edad(int edad) {
-    this._edad = edad;
+    this._edad = edad; //aatributo privado
   }
 
   //set edad(int edad) => this._edad = edad;
@@ -34,5 +29,5 @@ class Persona {
 void main() {
   var persona = Persona("Juan", 10);
   persona.edad = 12;
-  print("Edad " + persona.edad.toString());
+  print("Nombre: " + persona.nombre + " Edad " + persona.edad.toString());
 }

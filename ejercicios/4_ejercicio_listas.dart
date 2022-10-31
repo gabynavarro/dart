@@ -1,46 +1,38 @@
 void main() {
 //Lista de Longitud Fija
+  List<int> numbersList = [2, 23, 54, 32];
+  print("aplicando Add");
+  numbersList.add(10);
 
-  // Elements:    N   N   N   N   N
-  // Index:       0   1   2   3   4
-
-  List<int> numbersList = [5];
-  numbersList[0] = 73; // Operación de insert
-  numbersList[1] = 64;
-  numbersList[3] = 21;
-  numbersList[4] = 12;
-
-  numbersList[0] = 99; // Update operation
-  //numbersList[1] = null; // Delete operation
-
-  print(numbersList[0]);
-  print("\n");
-
-//    numbersList.remove(73);                 // Not supported in fixed-length list
-//    numbersList.add(24);                    // Not supported in fixed-length list
-//    numbersList.removeAt(3);                // Not supported in fixed-length list
-//    numbersList.clear();                    // Not supported in fixed-length list
-
-  for (int element in numbersList) {
-    // Using Individual Element (Objects)
-    print(element);
+  for (int elemento in numbersList) {
+    print(elemento);
   }
 
-  print("\n");
+  numbersList.remove(23);
+  print("Aplicando Remove");
+  for (int elemento in numbersList) {
+    print(elemento);
+  }
+  print("Remueve indice");
+  numbersList.removeAt(3);
+  print(numbersList);
+  //limpia la lista
+  numbersList.clear();
+  print(numbersList);
 
+  numbersList = [2, 23, 54, 32];
+  print("\n");
+  print("Usando Lambda");
   numbersList.forEach((element) => print(element)); // Using Lambda
-
   print("\n");
 
+  print("Usando index");
   for (int i = 0; i < numbersList.length; i++) {
     // Using Index
     print(numbersList[i]);
   }
 
-  //Lista de Longitud Variable
-  // Elements:    N   21  12
-  // Index:       0   1   2
-
+  print("Usando lista de longitud variable");
   List<String> countries = ["USA", "INDIA", "CHINA"]; // Método 1
   countries.add("Nepal");
   countries.add("Japan");
@@ -53,29 +45,22 @@ void main() {
 
   numbersList1[0] = 99; // Update operation
   //numbersList1[1] = null; // Delete operation
-
-  print(numbersList[0]);
+  print("Valor elmento posicion 0");
+  print(numbersList1[0]);
 
   numbersList1.remove(99);
   numbersList1.add(24);
-  numbersList1.removeAt(3);
+  numbersList1.removeAt(2);
 //    numbersList.clear();
 
   print("\n");
-
+  print("Reomueve valor 99 agrega 24, remueve posicion 3");
   for (int element in numbersList1) {
     // Using Individual Element ( Objects )
     print(element);
   }
 
-  print("\n");
+  print("Foreach usando lambda");
 
   numbersList1.forEach((element) => print(element)); // Using Lambda
-
-  print("\n");
-
-  for (int i = 0; i < numbersList1.length; i++) {
-    // Using Index
-    print(numbersList1[i]);
-  }
 }

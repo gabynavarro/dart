@@ -21,20 +21,19 @@ void main() {
   //el analizador genera un error.
   print(regalos);
   print(gasesNobles);
-
-  //regalos[1] ='test',
+  print("\n");
 //Puede crear los mismos objetos utilizando un constructor de maps.
-
+  print("Creando con constructor de mapa");
   var regalos2 = Map();
   regalos['primero'] = 'juguete';
   regalos['segundo'] = 'lego';
   regalos['tercero'] = 'autito';
-
+  print(regalos);
   var nobleGases = Map();
   nobleGases[2] = 'helium';
   nobleGases[10] = 'neon';
   nobleGases[18] = 'argon';
-
+  print(gasesNobles);
 // 1. Maps
 // --> KEY tiene que ser única
 // --> VALUE puede ser duplicada
@@ -50,33 +49,43 @@ void main() {
   fruits["apple"] = "red";
   fruits["banana"] = "yellow";
   fruits["guava"] = "green";
-
-  fruits.containsKey("apple"); // retorna true si la clave está en el map
+  print("\n");
+  print("Imprimiendo key:value de map");
+  fruits.forEach((key, value) => print(key + ":" + value));
+  print("\n");
+  print("Imprimiendo si contiene key apple");
+  fruits.containsKey(
+      "apple"); // retorna true si la clave está en el map null si no esta
+  print(fruits.containsKey("apple"));
+  print("\n");
+  print("Actualiza el value de applet");
   fruits.update("apple",
       (value) => "green"); // Actualiza el Value para una determinada KEY
+  print(fruits.values);
+
   fruits.remove("apple"); // elimina KEY y su VALUE and retorna el VALUE
-  fruits.isEmpty; // retorna true si el Map es vacio
+  print("Map vacio");
+  print(fruits.isEmpty);
+  // retorna true si el Map es vacio
   fruits.length; // retorna el número de elementos en el Map
 //    fruits.clear(); // Borra todos los elementos
 
-  print(fruits["apple"]);
-
   print("\n");
-
+  print("Imprimo LLaves:");
   for (String key in fruits.keys) {
     // IMprime las keys
     print(key);
   }
 
   print("\n");
-
+  print("Imprimo values:");
   for (String value in fruits.values) {
     // Imprime los values
     print(value);
   }
 
   print("\n");
-
+  print("Imprimo utilizando lambda:");
   fruits.forEach(
       (key, value) => print("key: $key and value: $value")); // Usando Lambda
 }
